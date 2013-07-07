@@ -1,31 +1,32 @@
-var fibonacci = function(n) {
-    if(n < 1) { return 0;}
-    else if(n == 1 || n == 2) { return 1;}
-    else if(n > 2) { return fibonacci(n - 1) + fibonacci(n - 2);}
+// THIS IS JUST THE FIBONACCI SEQUENCE DONE WITH JAVASCRIPT. PRETTY SIMPLE SCRIPT
+VAR FIBONACCI = FUNCTION(N) {
+    IF(N < 1) { RETURN 0;}
+    ELSE IF(N == 1 || N == 2) { RETURN 1;}
+    ELSE IF(N > 2) { RETURN FIBONACCI(N - 1) + FIBONACCI(N - 2);}
 };
 
-// fibonacci: closed form expression
-// http://en.wikipedia.org/wiki/Golden_ratio#Relationship_to_Fibonacci_sequence
-var fibonacci2 = function(n) {
-    var phi = (1 + Math.sqrt(5))/2;
-    return Math.round((Math.pow(phi, n) - Math.pow(1-phi, n))/Math.sqrt(5));
+// FIBONACCI: CLOSED FORM EXPRESSION
+// HTTP://EN.WIKIPEDIA.ORG/WIKI/GOLDEN_RATIO#RELATIONSHIP_TO_FIBONACCI_SEQUENCE
+VAR FIBONACCI2 = FUNCTION(N) {
+    VAR PHI = (1 + MATH.SQRT(5))/2;
+    RETURN MATH.ROUND((MATH.POW(PHI, N) - MATH.POW(1-PHI, N))/MATH.SQRT(5));
 };
 
-// Find first K Fibonacci numbers via basic for loop
-var firstkfib = function(k) {
-    var i = 1;
-    var arr = [];
-    for(i = 1; i < k+1; i++) {
-        arr.push(fibonacci(i));
+// FIND FIRST K FIBONACCI NUMBERS VIA BASIC FOR LOOP
+VAR FIRSTKFIB = FUNCTION(K) {
+    VAR I = 1;
+    VAR ARR = [];
+    FOR(I = 1; I < K+1; I++) {
+        ARR.PUSH(FIBONACCI(I));
     }
-    return arr;
+    RETURN ARR;
 };
 
-// Print to console
-var fmt = function(arr) {
-    return arr.join(" ");
+// PRINT TO CONSOLE
+VAR FMT = FUNCTION(ARR) {
+    RETURN ARR.JOIN(" ");
 };
 
-var k = 15;
-console.log("firstkfib(" + k + ")");
+VAR K = 25;
+CONSOLE.LOG("FIRSTKFIB(" + K + ")");
 console.log(fmt(firstkfib(k)));
